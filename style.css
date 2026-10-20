@@ -1,0 +1,286 @@
+/* .card{
+width: 90%;
+max-width: 470px;
+background: linear-gradient(135deg,#00feba,#5b548a);
+color: #fff;
+margin: 100px;
+padding: 40px 35px;
+text-align: center;
+border-radius: 18px;
+}
+.search{
+   width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 16px;
+    font-size: 18px;
+    flex: 1;
+    margin-right: 16px;
+
+
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50% ;
+    width: 60PX;
+    height: 60PX;
+    cursor: pointer;
+}
+.search button img{
+    width: 16px;
+}
+.weather h1{
+font-size: 80px;
+font-weight: 500px;
+
+}
+.weather h2{
+font-size: 45px;
+font-weight: 400px;
+margin-top: -10px;
+}
+.details{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+margin-top: 50px;
+}
+.col{
+display: flex;
+align-items: center;
+text-align: left;
+
+}
+
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.humadity, wind{
+    font-size: 28px;
+    margin-top: -6px;
+    
+}
+.weather-icon{
+    height:200px;
+    width: 300px;
+    border-radius: 20px;
+     background: #ebfffc;
+} */
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    padding: 20px;
+}
+
+/* Weather card */
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    padding: 35px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Search section */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Search input */
+.inp {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #333;
+    font-size: 15px;
+}
+
+/* Search input placeholder */
+.inp::placeholder {
+    color: #888;
+}
+
+/* Search button */
+.btn {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ffdd57;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: #ffc107;
+    transform: translateY(-2px);
+}
+
+/* Weather section */
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main weather icon */
+.weather-icon {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Temperature */
+.temp {
+    font-size: 65px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* City name */
+.city {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Humidity and wind information */
+.col {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Information icons */
+.col img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Humidity and wind values */
+.humidity,
+.wind {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Information labels */
+.col p:last-child {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Weather information layout */
+.weather {
+    position: relative;
+}
+
+/* Arrange weather details in a row */
+.weather > .col,
+.weather > .wind,
+.weather > .col + .col {
+    margin-top: 15px;
+}
+
+/* Wind speed text */
+.wind {
+    margin-top: 15px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+    .card {
+        padding: 25px 18px;
+    }
+
+    .temp {
+        font-size: 55px;
+    }
+
+    .city {
+        font-size: 24px;
+    }
+
+    .weather-icon {
+        width: 110px;
+        height: 110px;
+    }
+
+    .inp {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+}
+/* Humidity and wind side by side */
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.details .col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.details .col img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.details .wind {
+    margin-top: 0;
+}
